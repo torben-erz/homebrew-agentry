@@ -3,11 +3,11 @@
 # Diese Datei wird vom Release-Workflow (`.github/workflows/release.yml`,
 # Job `update-tap`) gerendert und ins Tap-Repo
 # `torben-erz/homebrew-agentry` als `Formula/agentry.rb` committed.
-# Vier Platzhalter werden vor dem Push ersetzt:
-#   0.1.0-beta.3              Versions-String ohne `v`-Präfix (z. B. `0.1.0`)
-#   v0.1.0-beta.3                  Tag-Name mit `v`-Präfix (z. B. `v0.1.0`)
-#   4e0677e434447ce6d8b76e7ed83c632d35d53e1e3ed54850c6ee2297e638d342   SHA256 des macOS-arm64-Tarballs
-#   df9b3dd05a78b45b36f8bb1ddfff6a908c39d44e4ec284374991464f5503a808  SHA256 des Linux-x86_64-Tarballs
+# Die Platzhalter im `version`/`url`/`sha256`-Block unten werden vor dem
+# Push durch echte Werte ersetzt — Render-Mechanik siehe Workflow-Datei.
+# Achtung: alle Platzhalter-Tokens dürfen nur EINMAL im File vorkommen
+# (im funktionalen Block), nicht zusätzlich in dieser Doku-Kopfzeile —
+# sonst zerstört die sed-Substitution die Kommentar-Semantik.
 #
 # Installation aus dem Tap:
 #   brew tap torben-erz/agentry
@@ -21,20 +21,20 @@
 class Agentry < Formula
   desc "Plattform-agnostisches Agenten-Framework — Tickets autonom in Pull Requests verwandeln"
   homepage "https://github.com/torben-erz/agentry-dist"
-  version "0.1.0-beta.3"
+  version "0.1.0-beta.4"
   license "Proprietary" # Wird sich mit der Vertriebsmodell-Entscheidung klären.
 
   on_macos do
     on_arm do
-      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.3/agentry-v0.1.0-beta.3-macos-arm64.tar.gz"
-      sha256 "4e0677e434447ce6d8b76e7ed83c632d35d53e1e3ed54850c6ee2297e638d342"
+      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.4/agentry-v0.1.0-beta.4-macos-arm64.tar.gz"
+      sha256 "f446f10b937698e21d125cd9dc79c0c7a244c0e5f764df928d8b2f6025fbad92"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.3/agentry-v0.1.0-beta.3-linux-x86_64.tar.gz"
-      sha256 "df9b3dd05a78b45b36f8bb1ddfff6a908c39d44e4ec284374991464f5503a808"
+      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.4/agentry-v0.1.0-beta.4-linux-x86_64.tar.gz"
+      sha256 "fdaffdba82482fcb405ebf0215baf27248c4949eb22008b785f41d5dee6319e6"
     end
   end
 
