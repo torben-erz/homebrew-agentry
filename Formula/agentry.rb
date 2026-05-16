@@ -21,20 +21,20 @@
 class Agentry < Formula
   desc "Plattform-agnostisches Agenten-Framework — Tickets autonom in Pull Requests verwandeln"
   homepage "https://github.com/torben-erz/agentry-dist"
-  version "0.1.0-beta.14"
+  version "0.1.0-beta.15"
   license "Proprietary" # Wird sich mit der Vertriebsmodell-Entscheidung klären.
 
   on_macos do
     on_arm do
-      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.14/agentry-v0.1.0-beta.14-macos-arm64.tar.gz"
-      sha256 "872227a007dc6ed0321412041537a908903cbca9d226395951be57063bc7637a"
+      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.15/agentry-v0.1.0-beta.15-macos-arm64.tar.gz"
+      sha256 "5fddfa21f025681c998fc9a2a07ebb5704d5c54686120ae706e2f671c94c2ba4"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.14/agentry-v0.1.0-beta.14-linux-x86_64.tar.gz"
-      sha256 "ff8d1b46f0715213da777af8a8adc5263bf39333269e4c93a20a93bb0f2d6e80"
+      url "https://github.com/torben-erz/agentry-dist/releases/download/v0.1.0-beta.15/agentry-v0.1.0-beta.15-linux-x86_64.tar.gz"
+      sha256 "d80d70e1b91d9866c0e775c7fffe8fe8e20ee92b132dcf71b14c49937c4784ce"
     end
   end
 
